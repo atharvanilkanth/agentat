@@ -1,0 +1,1 @@
+"""Synthetic window generator modules."""

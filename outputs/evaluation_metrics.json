@@ -1,0 +1,74 @@
+{
+  "ablation": [
+    {
+      "variant": "A_real",
+      "n_windows": 177,
+      "concurrent_room_activation": 0.1864406779661017,
+      "jsd_room_distribution": 0.0,
+      "overlap_preservation_rate": 1.0,
+      "activity_pair_entropy": 2.1962782208849068,
+      "room_pair_entropy": 3.103129218896789,
+      "violation_teleportation": 0.4915254237288136,
+      "violation_activity_room_mismatch": 3.0508474576271185,
+      "violation_contradictory_state": 0.005649717514124294,
+      "violation_exclusive_resource": 0.11299435028248588,
+      "violation_missing_resident_events": NaN
+    },
+    {
+      "variant": "B_baseline",
+      "n_windows": 177,
+      "concurrent_room_activation": 0.0,
+      "jsd_room_distribution": 0.5921967450347188,
+      "overlap_preservation_rate": 0.0,
+      "activity_pair_entropy": 1.6261694985118886,
+      "room_pair_entropy": 0.0,
+      "violation_teleportation": 2.2542372881355934,
+      "violation_activity_room_mismatch": 2.751412429378531,
+      "violation_contradictory_state": 0.011299435028248588,
+      "violation_exclusive_resource": NaN,
+      "violation_missing_resident_events": 1.0
+    },
+    {
+      "variant": "C_multiagent_raw",
+      "n_windows": 177,
+      "concurrent_room_activation": 0.1977401129943503,
+      "jsd_room_distribution": 0.016599116696748337,
+      "overlap_preservation_rate": 1.0,
+      "activity_pair_entropy": 2.1962782208849068,
+      "room_pair_entropy": 3.0920427720948775,
+      "violation_teleportation": 2.774011299435028,
+      "violation_activity_room_mismatch": 4.135593220338983,
+      "violation_contradictory_state": 0.05084745762711865,
+      "violation_exclusive_resource": 0.1751412429378531,
+      "violation_missing_resident_events": NaN
+    },
+    {
+      "variant": "D_multiagent_validated",
+      "n_windows": 177,
+      "concurrent_room_activation": 0.1977401129943503,
+      "jsd_room_distribution": 0.016599116696748337,
+      "overlap_preservation_rate": 1.0,
+      "activity_pair_entropy": 2.1962782208849068,
+      "room_pair_entropy": 3.0920427720948775,
+      "violation_teleportation": NaN,
+      "violation_activity_room_mismatch": 3.248587570621469,
+      "violation_contradictory_state": 0.005649717514124294,
+      "violation_exclusive_resource": NaN,
+      "violation_missing_resident_events": NaN
+    }
+  ],
+  "classifier": {
+    "baseline": {
+      "mean_accuracy": 1.0,
+      "std_accuracy": 0.0,
+      "n_real": 177,
+      "n_synth": 177
+    },
+    "validated": {
+      "mean_accuracy": 0.6553672316384181,
+      "std_accuracy": 0.01997476783012846,
+      "n_real": 177,
+      "n_synth": 177
+    }
+  }
+}

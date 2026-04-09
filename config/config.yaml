@@ -1,0 +1,25 @@
+dataset:
+  name: cairo
+  data_dir: data/cairo
+  event_file: data.csv
+  activity_file: activities.csv
+
+activities:
+  selected:
+    - Breakfast
+    - Dinner
+    - Work_in_Office
+    - Sleep
+    - Wake
+    - Bed_to_Toilet
+
+overlap:
+  min_duration_seconds: 120
+  min_events_per_resident: 2
+
+time_bin_seconds: 30
+
+random_seed: 42
+
+outputs:
+  dir: outputs
