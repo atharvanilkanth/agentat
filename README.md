@@ -44,13 +44,27 @@ Python ≥ 3.9 is required. All dependencies are listed in `requirements.txt`.
 ## Cairo input format
 
 The pipeline accepts the [CASAS Cairo](http://casas.wsu.edu/datasets/) multi-resident dataset.  
-Place the files under `data/cairo/`:
+To run on **real Cairo data** (not synthetic fallback), place the files under `data/cairo/`:
 
 ```
 data/cairo/
 ├── data.csv        # sensor events
 └── activities.csv  # activity label annotations
 ```
+
+### If you added `data/cairo/cairo.csv`
+
+The repository currently includes `data/cairo/cairo.csv`, but the pipeline config expects:
+
+- `event_file: data.csv`
+- `activity_file: activities.csv`
+
+So you need one of these before running with real data:
+
+1. Rename `cairo.csv` to `data.csv` **and** add `activities.csv`, or
+2. Keep `cairo.csv`, set `dataset.event_file: cairo.csv` in `config/config.yaml`, **and** add `activities.csv`.
+
+If `activities.csv` is missing, the loader falls back to synthetic Cairo-like data.
 
 ### `data.csv` — sensor events
 
