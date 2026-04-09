@@ -1,0 +1,1 @@
+"""Activity template building module."""
